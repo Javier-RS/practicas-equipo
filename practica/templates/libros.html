@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' ) }}">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Listado de libros</h1>
+    <a href="index.html">Volver</a>
+    <div>
+        <a href="{{url_for('agregarlibro')}}">Agregar</a>
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Genero</th>
+                    <th>Descripcion</th>
+                    <th>Autor</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for libro in libros %}
+                <tr>
+                    <td>{{libro.id}}</td>
+                    <td>{{libro.titulo}}</td>
+                    <td>{{libro.genero}}</td>
+                    <td>{{libro.descripcion}}</td>
+                    <td>{{libro.autor}}</td>
+                    <td><a href="editarlibro/{{libro.id}}">Editar</a></td>
+                    <td><a href="eliminarlibro/{{libro.id}}">eliminar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,383 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:02:18] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:02:55] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:02:57] "GET /autores.html HTTP/1.1" 200 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x0000024BA07A2E50>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:03:03] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:03:09] "[32mPOST /agregarautor HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:03:09] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:06:41] "GET /index.html HTTP/1.1" 200 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:06:46] "GET /autores.html HTTP/1.1" 200 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:06:53] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:07:03] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\Desktop\python\practica\app.py", line 38, in inicio
+    return render_template('index.html',autores=autores)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\Desktop\python\practica\templates\index.html", line 7, in top-level template code
+    <link rel="stylesheet" href="{{ url_for(filename='css/estilos.css' ) }}">
+TypeError: url_for() missing 1 required positional argument: 'endpoint'
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:09:43] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /index.html [GET]
+Traceback (most recent call last):
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Javie\Desktop\python\practica\app.py", line 38, in inicio
+    return render_template('index.html',autores=autores)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Javie\Desktop\python\practica\templates\index.html", line 7, in top-level template code
+    <link rel="stylesheet" href="{{ url_for('css', filename='estilos.css' ) }}">
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "c:\users\javie\desktop\python\practica\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'css' with values ['filename']. Did you mean 'static' instead?
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:10:48] "[35m[1mGET /index.html HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:32] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:32] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:34] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:34] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:36] "GET /autores.html HTTP/1.1" 200 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:38] "GET /libros.html HTTP/1.1" 200 -
+DEBUG:app:cargando generos
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:11:39] "GET /generos.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:12:20] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:12:20] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:12:22] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:50] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:50] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:54] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:54] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:55] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:13:55] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:14:27] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:14:27] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:14:49] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:14:49] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:05] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:05] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:18] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:25] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:19:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:20:05] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:20:05] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:20:37] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:20:37] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:11] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:20] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:20] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:56] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:21:56] "GET /static/css/style.css HTTP/1.1" 200 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:22:03] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:22:42] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:22:42] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:08] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:09] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:25] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:25] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:46] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:47] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:23:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:24:11] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:24:11] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:12] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:12] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:40] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:42] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:25:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:51] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:51] "GET /static/css/style.css HTTP/1.1" 200 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000002D0BA973AC0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:54] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000002D0BAA69A90>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:59] "GET /editarautor/6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:26:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000002D0BAA690D0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:01] "GET /editarautor/7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:06] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarlibro.html mandando:
+DEBUG:app:<forms.LibroForm object at 0x000002D0BA9738E0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:07] "GET /editarlibro/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:09] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarlibro.html mandando:
+DEBUG:app:<forms.LibroForm object at 0x000002D0BAAA2E20>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:21] "GET /editarlibro/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:27:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:07] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000002D0BAA690D0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:12] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x0000018BA0C22D00>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:54] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:28:54] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001EC93762D00>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:29] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:29] "GET /static/css/style.css HTTP/1.1" 200 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:35] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001EC93762A90>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:36] "GET /editarautor/6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001EC937A27F0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:37] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:43] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarlibro.html mandando:
+DEBUG:app:<forms.LibroForm object at 0x000001EC937629A0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:45] "GET /editarlibro/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:30:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:15] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:18] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x0000017AA7051AF0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:19] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:33:21] "[33mGET /inicio HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001561CF23D00>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:03] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:05] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:53] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:54] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:34:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:23] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:24] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:26] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:27] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:28] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:35:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:39:01] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:39:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:39:02] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:39:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:40:26] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:40:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a agregarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001E30422AD60>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:41:27] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:41:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarautor.html mandando:
+DEBUG:app:<forms.AutorForm object at 0x000001E3041536A0>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:21] "GET /editarautor/6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a eliminar autor
+DEBUG:app:ID : 6 ,Nombre : javier2 ,Apellido: mondragon ,Email: cronwguard@gmail.com
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:50] "[32mGET /eliminarautor/6 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:50] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:53] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:42:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:08] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:09] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editarlibro.html mandando:
+DEBUG:app:<forms.LibroForm object at 0x000001E304153670>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:25] "GET /editarlibro/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando generos
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:41] "GET /generos.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:58] "GET /agregargenero HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:43:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:procediendo a editargenero.html mandando:
+DEBUG:app:<forms.GeneroForm object at 0x000001E304153490>
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:06] "GET /editargenero/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:45] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando libros
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:46] "GET /libros.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:47] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+DEBUG:app:cargando autores
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:48] "GET /autores.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:49] "GET /index.html HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Oct/2022 22:44:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
